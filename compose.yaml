@@ -19,6 +19,28 @@ services:
     volumes:
     - ./prometheus:/etc/prometheus
     - prometheus-data:/prometheus
+  
+  node_exporter_1:
+    image: prom/node-exporter
+    container_name: node_exporter_1
+    restart: unless-stopped
+    ports:
+     - '9101:9101'
+
+  node_exporter_2:
+    image: prom/node-exporter
+    container_name: node_exporter_2
+    restart: unless-stopped
+    ports:
+    - '9102:9102'
+    
+  node_exporter_3:
+    image: prom/node-exporter
+    container_name: node_exporter_3
+    restart: unless-stopped
+    ports:
+    - '9103:9103'
+
 
 
 volumes:
