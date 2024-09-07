@@ -24,22 +24,34 @@ services:
     image: prom/node-exporter
     container_name: node_exporter_1
     restart: unless-stopped
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
     ports:
-     - '9101:9101'
+     - '9101:9100'
 
   node_exporter_2:
     image: prom/node-exporter
     container_name: node_exporter_2
     restart: unless-stopped
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
     ports:
-    - '9102:9102'
+    - '9102:9100'
     
   node_exporter_3:
     image: prom/node-exporter
     container_name: node_exporter_3
     restart: unless-stopped
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
     ports:
-    - '9103:9103'
+    - '9103:9100'
 
 
 
