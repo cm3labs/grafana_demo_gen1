@@ -20,7 +20,7 @@ scrape_configs:
 
     # As prometheus doesn't support .env, and I don't have time to learn a bunch of other stuff right now, I will set playing around with secrets styles until maybe a gen1.2
     remote_write:
-      - url: <YOU SHOULD NOT SEE THIS>
+      - url: <YOU REALlY SHOULD NOT SEE THIS>
         basic_auth:
           username: <Your Metrics instance ID>
           password: <Your Cloud Access Policy token>
