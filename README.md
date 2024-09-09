@@ -3,6 +3,7 @@ Testing grafana. Using: docker, prometheus, grafana(cloud)
 
 2024-09-09 :
 - created branch gen1.1. Goal: local dockers -> grafana cloud dashboard
+- realized I don't have a .gitignore. Doin that to ensure I don't expose any secrets ...
 
 2024-09-07 :
 - realized that prom wasn't getting node exporter data ... fixed port mapping and settings i ncompose.yaml and prometheus.yml

@@ -17,6 +17,13 @@ scrape_configs:
 
     static_configs:
       - targets: ['localhost:9090']
+
+    # As I prometheus doesn't support .env, and I don't have time to learn a bunch of other stuff right now, I will set playing around with secrets styles until maybe a gen1.2
+    remote_write:
+      - url: <Your Metrics instance remote_write endpoint>
+        basic_auth:
+          username: <Your Metrics instance ID>
+          password: <Your Cloud Access Policy token>
       
 
   - job_name: 'node_exporter_1'
