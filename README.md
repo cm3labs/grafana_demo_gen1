@@ -1,5 +1,5 @@
 # grafana_demo_gen1
-Testing grafana. Using: docker, prometheus, grafana
+Testing grafana. Using: docker, prometheus, grafana(cloud)
 
 2024-09-09 :
 - created branch gen1.1. Goal: local dockers -> grafana cloud dashboard
