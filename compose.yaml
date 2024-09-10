@@ -28,8 +28,11 @@ services:
       - /proc:/host/proc:ro
       - /sys:/host/sys:ro
       - /:/rootfs:ro
+    command:
+     # To specify port in node-exporter colon is required
+     - '--web.listen-address=:9101'  
     ports:
-     - '9101:9100'
+     - '9101:9101'
 
   node_exporter_2:
     image: prom/node-exporter
@@ -39,8 +42,10 @@ services:
       - /proc:/host/proc:ro
       - /sys:/host/sys:ro
       - /:/rootfs:ro
+    command:
+     - '--web.listen-address=:9102'  
     ports:
-    - '9102:9100'
+    - '9102:9102'
     
   node_exporter_3:
     image: prom/node-exporter
@@ -50,8 +55,10 @@ services:
       - /proc:/host/proc:ro
       - /sys:/host/sys:ro
       - /:/rootfs:ro
+    command:
+     - '--web.listen-address=:9103' 
     ports:
-    - '9103:9100'
+    - '9103:9103'
 
 
 
